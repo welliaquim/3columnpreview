@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+
+span, div, p {
+    display: grid;
+}
+
+.attribution {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(100%);
+    gap: 0.2rem;
+}
+
+.container {
+    width: 801px;
+    grid-template-columns: repeat(3, 3fr);
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.card1, .card2, .card3 {
+    gap: 3rem;
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
+    width: 267px;
+}
+
+.info {
+    gap: 1.5rem;
+}
+
+.card1 {
+    background: hsl(31, 77%, 52%);
+}
+
+.card2 {
+    background: hsl(184, 100%, 22%);
+}
+
+.card3 {
+    background: hsl(179, 100%, 13%);
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+button {
+    width: 70%;
+    padding: 0.7rem 1.1rem;
+    border-radius: 1.2rem;
+    border: 0;
+    background: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid hsl(0, 0%, 95%);;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.card1 button {
+    color: hsl(31, 77%, 52%);
+}
+
+.card1 button:hover{
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(31, 77%, 52%);
+}
+
+.card2 button {
+    color: hsl(184, 100%, 22%);
+}
+
+.card2 button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card3 button {
+    color: hsl(179, 100%, 13%);
+}
+
+.card3 button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width:830px) {
+    body {
+        height: fit-content;
+        grid-template-rows: repeat(4, 3fr);
+    }
+    .container {
+        display: grid;
+        padding: 3rem 0px;
+    }
+
+    .card1 {
+        grid-column-start: 2;
+        border-radius: 0.3rem 0.3rem 0px 0px;
+    }
+    .card2 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    .card3 {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        border-radius: 0px 0px 0.3rem 0.3rem;
+    }
+    .attribution {
+        position: relative;
+        transform: translateX(0px);
+        grid-column-start: 2;
+    }
+}
